@@ -1,0 +1,42 @@
+
+
+#include <stdio.h>
+
+int main(void){
+
+ //Valores para resistencia R
+
+ float R1_2; // REQ R1 * R2
+ float R1_2_3; // REQ R1_2 * R3
+
+ // Definir variáveis:
+ float e_R1, e_R2, e_R3, e_R4;
+ float s_Req;
+
+ //entrada de valores
+ printf("Valor R1: ");
+ scanf ("%f" , &e_R1);
+
+ printf("Valor R2: ");
+ scanf ("%f" , &e_R2);
+
+ printf("Valor R3: ");
+ scanf ("%f" , &e_R3);
+
+ printf("Valor R4: ");
+ scanf ("%f" , &e_R4);
+
+
+R1_2 = ((e_R1*e_R2)/(e_R1 + e_R2));
+R1_2_3 = ((R1_2*e_R3)/ (R1_2 + e_R3));
+s_Req = ((R1_2_3*e_R4)/(R1_2_3 + e_R4));
+
+if (s_Req == 0)
+
+{
+  printf("Erro de Cálculo: ");
+}
+
+else 
+return 0;
+}
