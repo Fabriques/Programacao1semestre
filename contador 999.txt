@@ -1,0 +1,22 @@
+#include <iostream>
+
+  int main(void) {
+  int e_nro, cent, dez, uni, mult, v_aux;
+
+  v_aux = 100;
+  e_nro = 999;
+if (e_nro <= 999)
+
+while (v_aux <= e_nro)
+{
+  uni = v_aux%10;
+  dez = ((v_aux - uni) / 10) %10;
+  cent = (v_aux - 10*dez - uni) / 100;
+  mult = cent*dez*uni;
+
+  printf ("%i = %d%d%d = %d\n" , v_aux, cent, dez, uni, mult);
+  v_aux++;
+}
+return 0;
+
+}
